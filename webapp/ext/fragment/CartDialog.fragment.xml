@@ -1,0 +1,25 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Dialog
+        id="cartDialog"
+        title="Cart">
+
+        <List items="{cart>/Products}">
+            <StandardListItem
+                title="{cart>ProductName}"
+                description="{cart>QuantityPerUnit}"
+                info="{cart>UnitPrice}"
+                type="Inactive" />
+        </List>
+
+        <endButton>
+            <Button 
+                text="Close" 
+                press="onCloseCartDialog" />
+        </endButton>
+
+    </Dialog>
+
+</core:FragmentDefinition>
